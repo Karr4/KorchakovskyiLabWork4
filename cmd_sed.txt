@@ -1,0 +1,5 @@
+ sed 's/\(<\/title>\)/\1\n<h1>Таблиця автоматично оновлена. Автор - Корчаковський Кирило Сергійович, група АІ-215<\/h1>/' example3.html > new_example3.html
+ sed -Ei '/^[[:space:]]*$/d' new_example3.html
+ sed -Ei 's/([[:space:]]+)([[:alpha:]]+)([[:space:]]+)\2/\1\2/' new_example3.html
+
+ sed -Ei 's/(<td>)([[:punct:]]+)(<\/td>)/\1\3/' new_example3.html
